@@ -6,7 +6,7 @@ from streamlit import cache_resource, cache_data
 
 from config.config import (
     SCOPES,
-    SERVICE_ACCOUNT_FILE,
+    GOOGLE_CREDENTIALS,
     SPREADSHEET_ID,
     RANGE_NAME
 )
@@ -15,8 +15,8 @@ from config.config import (
 @cache_resource
 def connect_google_sheets():
 
-    creds = Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE,
+    creds = Credentials.from_service_account_info(
+       GOOGLE_CREDENTIALS,
         scopes=SCOPES
     )
 

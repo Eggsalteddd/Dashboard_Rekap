@@ -1,17 +1,11 @@
-import os
+import streamlit as st
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets"
 ]
 
-SERVICE_ACCOUNT_FILE = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)),
-    "credentials",
-    "service_account.json"
-)
-
-SPREADSHEET_ID = (
-    "1jNWOPMfGkxy2AopklZYc6HLFujN42UbAHLBpIqMv_wY"
-)
+SPREADSHEET_ID = "1jNWOPMfGkxy2AopklZYc6HLFujN42UbAHLBpIqMv_wY"
 
 RANGE_NAME = "Produktivitas!A1:T53"
+
+GOOGLE_CREDENTIALS = st.secrets["gcp_service_account"]
