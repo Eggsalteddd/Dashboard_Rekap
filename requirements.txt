@@ -1,0 +1,3 @@
+from modules.google_sheets import get_data
+from modules.data_processing import clean_data
+print(clean_data)
